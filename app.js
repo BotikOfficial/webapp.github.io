@@ -16,15 +16,15 @@ function showItems(category) {
 		case "Автотовари":
 			itemsContainer.innerHTML = `
 				<div class="item">
-					<img src="1.png" alt="" class="img">
+					<img src="2.jpg" alt="" class="img">
 					<button class="btn" id="btn1">Add</button>
 				</div>
 				<div class="item">
-					<img src="2.png" alt="" class="img">
+					<img src="2.jpg" alt="" class="img">
 					<button class="btn" id="btn2">Add</button>
 				</div>
 				<div class="item">
-					<img src="3.png" alt="" class="img">
+					<img src="2.jpg" alt="" class="img">
 					<button class="btn" id="btn3">Add</button>
 				</div>
 			`;
