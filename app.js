@@ -58,7 +58,6 @@ function showItems(category) {
 document.addEventListener("click", function(event) {
 	if (event.target.classList.contains("category-btn")) {
 		let selectedCategory = event.target.textContent;
-		alert("Ви вибрали категорію '" + selectedCategory + "'!");
 		item = selectedCategory;
 		tg.MainButton.setText("Ви вибрали категорію '" + selectedCategory + "'!");
 		tg.MainButton.show();
