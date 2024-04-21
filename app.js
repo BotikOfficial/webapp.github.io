@@ -29,14 +29,14 @@ function showItems(category) {
 				</div>
 			`;
 			break;
-		case "Дім та сад":
+		case "Взуття":
 			itemsContainer.innerHTML = `
 				<div class="item">
-					<img src="4.png" alt="" class="img">
+					<img src="1.png" alt="" class="img">
 					<button class="btn" id="btn4">Add</button>
 				</div>
 				<div class="item">
-					<img src="5.png" alt="" class="img">
+					<img src="1.png" alt="" class="img">
 					<button class="btn" id="btn5">Add</button>
 				</div>
 			`;
@@ -44,7 +44,7 @@ function showItems(category) {
 		case "Електроніка":
 			itemsContainer.innerHTML = `
 				<div class="item">
-					<img src="6.png" alt="" class="img">
+					<img src="3.jpg" alt="" class="img">
 					<button class="btn" id="btn6">Add</button>
 				</div>
 			`;
