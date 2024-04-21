@@ -69,26 +69,28 @@ document.addEventListener("click", function(event) {
 		let selectedItemId = event.target.id;
 		switch (selectedItemId) {
 			case "btn1":
-				alert("Ви вибрали товар 1!");
+				item = "Товар 1";
 				break;
 			case "btn2":
-				alert("Ви вибрали товар 2!");
+				item = "Товар 2";
 				break;
 			case "btn3":
-				alert("Ви вибрали товар 3!");
+				item = "Товар 3";
 				break;
 			case "btn4":
-				alert("Ви вибрали товар 4!");
+				item = "Товар 4";
 				break;
 			case "btn5":
-				alert("Ви вибрали товар 5!");
+				item = "Товар 5";
 				break;
 			case "btn6":
-				alert("Ви вибрали товар 6!");
+				item = "Товар 6";
 				break;
 			default:
 				break;
 		}
+		tg.MainButton.setText("Ви вибрали " + item + "!");
+		tg.MainButton.show();
 	}
 });
 
