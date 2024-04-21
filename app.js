@@ -59,8 +59,6 @@ document.addEventListener("click", function(event) {
 	if (event.target.classList.contains("category-btn")) {
 		let selectedCategory = event.target.textContent;
 		item = selectedCategory;
-		tg.MainButton.setText("Ви вибрали категорію '" + selectedCategory + "'!");
-		tg.MainButton.show();
 		showItems(item); // Показувати відповідні товари
 	}
 });
