@@ -85,28 +85,34 @@ btn6.addEventListener("click", function(){
 });
 
 category1.addEventListener("click", function(){
-    alert("Ви вибрали категорію 1!");
+	alert("Ви вибрали категорію 'Автотовари'!");
+	item = "Автотовари";
+	tg.MainButton.setText("Ви вибрали категорію 'Автотовари'!");
+	tg.MainButton.show();
 });
 
 category2.addEventListener("click", function(){
-    alert("Ви вибрали категорію 2!");
+	alert("Ви вибрали категорію 'Дім та сад'!");
+	item = "Дім та сад";
+	tg.MainButton.setText("Ви вибрали категорію 'Дім та сад'!");
+	tg.MainButton.show();
 });
 
 category3.addEventListener("click", function(){
-    alert("Ви вибрали категорію 3!");
+	alert("Ви вибрали категорію 'Електроніка'!");
+	item = "Електроніка";
+	tg.MainButton.setText("Ви вибрали категорію 'Електроніка'!");
+	tg.MainButton.show();
 });
-
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 });
 
-
 let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = `${tg.initDataUnsafe.user.first_name}
-${tg.initDataUnsafe.user.last_name}`;
+p.innerText = `${tg.initDataUnsafe.user.first_name} ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
