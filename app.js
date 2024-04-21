@@ -14,6 +14,10 @@ let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
+let category1 = document.getElementById("category1");
+let category2 = document.getElementById("category2");
+let category3 = document.getElementById("category3");
+
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
@@ -80,6 +84,18 @@ btn6.addEventListener("click", function(){
 	}
 });
 
+category1.addEventListener("click", function(){
+    alert("Ви вибрали категорію 1!");
+});
+
+category2.addEventListener("click", function(){
+    alert("Ви вибрали категорію 2!");
+});
+
+category3.addEventListener("click", function(){
+    alert("Ви вибрали категорію 3!");
+});
+
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
@@ -94,11 +110,3 @@ p.innerText = `${tg.initDataUnsafe.user.first_name}
 ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
-
-
-
-
-
-
-
-
