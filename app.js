@@ -7,17 +7,6 @@ tg.MainButton.color = '#2cab37';
 
 let item = "";
 
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let btn4 = document.getElementById("btn4");
-let btn5 = document.getElementById("btn5");
-let btn6 = document.getElementById("btn6");
-
-let category1 = document.getElementById("category1");
-let category2 = document.getElementById("category2");
-let category3 = document.getElementById("category3");
-
 // Функція для показу відповідних товарів при виборі категорії
 function showItems(category) {
 	let itemsContainer = document.getElementById("itemsContainer");
@@ -66,28 +55,15 @@ function showItems(category) {
 }
 
 // Обробники подій для кнопок категорій
-category1.addEventListener("click", function(){
-	alert("Ви вибрали категорію 'Автотовари'!");
-	item = "Автотовари";
-	tg.MainButton.setText("Ви вибрали категорію 'Автотовари'!");
-	tg.MainButton.show();
-	showItems(item); // Показувати відповідні товари
-});
-
-category2.addEventListener("click", function(){
-	alert("Ви вибрали категорію 'Дім та сад'!");
-	item = "Дім та сад";
-	tg.MainButton.setText("Ви вибрали категорію 'Дім та сад'!");
-	tg.MainButton.show();
-	showItems(item); // Показувати відповідні товари
-});
-
-category3.addEventListener("click", function(){
-	alert("Ви вибрали категорію 'Електроніка'!");
-	item = "Електроніка";
-	tg.MainButton.setText("Ви вибрали категорію 'Електроніка'!");
-	tg.MainButton.show();
-	showItems(item); // Показувати відповідні товари
+document.addEventListener("click", function(event) {
+	if (event.target.classList.contains("category-btn")) {
+		let selectedCategory = event.target.textContent;
+		alert("Ви вибрали категорію '" + selectedCategory + "'!");
+		item = selectedCategory;
+		tg.MainButton.setText("Ви вибрали категорію '" + selectedCategory + "'!");
+		tg.MainButton.show();
+		showItems(item); // Показувати відповідні товари
+	}
 });
 
 // Обробники подій для кнопок товарів
